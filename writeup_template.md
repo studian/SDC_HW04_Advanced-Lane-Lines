@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./camera_cal/calibration1.jpg "Original"
+[image1]: ./output_images/tesp0.JPG "Undistorted"
 [image2]: ./output_images/camera_calib/undistortion1.jpg "Undistorted"
 
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
@@ -38,11 +38,7 @@ The goals / steps of this project are the following:
 * `objpoints` and `imgpoints` are then used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. 
 * I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-Original Image
 ![alt text][image1]
-
-Undistorted Image
-![alt text][image2]
 
 ### Pipeline (single images)
 
