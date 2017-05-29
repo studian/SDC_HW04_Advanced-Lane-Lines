@@ -54,6 +54,7 @@ The goals / steps of this project are the following:
 * A perspective transform to and from "bird's eye" perspective is done in a function `called warp()`. 
 * The `warp()` function takes as input an color image (img), as well as the tobird boolean paramter. 
 * This resulted in the following source and destination points:
+
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
 | 190, 720      | 340, 720      | 
