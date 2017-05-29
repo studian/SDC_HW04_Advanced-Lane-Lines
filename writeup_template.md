@@ -131,7 +131,5 @@ The goals / steps of this project are the following:
 
 ## Problems encountered and Outlook
 
-* For lines detected far away a threshold on the distance eliminated the problem. 
-* By far the most work was implementing the logic of a continuous update of detected lines as well as restarting when the buffer of previous lines emptied. 
-* At the moment the pipeline will likely fail as soon as more (spurious) lines are on the same lane, as e.g. in the first challenge video. 
-* This could be solved by building separate lane line detectors for yellow and white together with additional logic which line to choose.
+* For lanes, I have the problem to find threshold of lane.
+* As soon as possible, I have plan to improve lane detecition agolithm on "challenge_video.mp4" and "harder_challenge_video.mp4".
