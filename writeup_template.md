@@ -39,7 +39,8 @@ The goals / steps of this project are the following:
 ### My whole implemented algorigm pipline is decribed in:
 * Advanced Lane Finding.ipynb
 * Advanced_Lane_Finding.html
-
+* [link to my pipeline IPYNB file](./Advanced Lane Finding.ipynb)
+* [link to my pipeline HTML file](./Advanced Lane Finding.html)
 ---
 
 ## Camera Calibration
