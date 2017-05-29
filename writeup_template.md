@@ -22,6 +22,8 @@ The goals / steps of this project are the following:
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
+*My all implemented algorigm pipline is decribed in "./Advanced Lane Finding.ipynb" and "./Advanced_Lane_Finding.html".*
+
 ## Camera Calibration
 
 ### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
