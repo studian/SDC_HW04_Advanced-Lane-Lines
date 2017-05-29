@@ -14,8 +14,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
+[image1]: ./camera_cal/calibration1.jpg "Original"
+[image2]: ./output_images/camera_calib/undistortion1.jpg "Undistorted"
+
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
@@ -38,6 +39,7 @@ The goals / steps of this project are the following:
 * I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
 ![alt text][image1]
+![alt text][image2]
 
 ### Pipeline (single images)
 
