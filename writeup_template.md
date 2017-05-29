@@ -122,12 +122,9 @@ The goals / steps of this project are the following:
 
 ## Pipeline (video)
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
-
-
-Here's a [link to my video (project_video) result #1](./output_images/test_results/detected_lane_project_video.mp4)
-Here's a [link to my video (challenge_video) result #1](./output_images/test_results/detected_lane_challenge_video.mp4)
-Here's a [link to my video (harder_challenge_video) result #2](./output_images/test_results/detected_lane_harder_challenge_video.mp4)
+* Here's a [link to my video (project_video) result #1](./output_images/test_results/detected_lane_project_video.mp4)
+* Here's a [link to my video (challenge_video) result #2](./output_images/test_results/detected_lane_challenge_video.mp4)
+* Here's a [link to my video (harder_challenge_video) result #3](./output_images/test_results/detected_lane_harder_challenge_video.mp4)
 
 ---
 
