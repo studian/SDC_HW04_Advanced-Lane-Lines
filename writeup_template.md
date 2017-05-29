@@ -39,9 +39,6 @@ The goals / steps of this project are the following:
 ### My whole implemented algorigm pipline is decribed in:
 * Advanced Lane Finding.ipynb
 * Advanced_Lane_Finding.html
-* [link to my pipeline IPYNB file](./Advanced Lane Finding.ipynb)
-* [link to my pipeline HTML file](./Advanced Lane Finding.html)
-Check out the [my pipline](./Advanced Lane Finding.html)(./Advanced Lane Finding.ipynb).
 ---
 
 ## Camera Calibration
@@ -130,8 +127,11 @@ Check out the [my pipline](./Advanced Lane Finding.html)(./Advanced Lane Finding
 
 ---
 
-### Discussion
+# Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+## Problems encountered and Outlook
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+* For lines detected far away a threshold on the distance eliminated the problem. 
+* By far the most work was implementing the logic of a continuous update of detected lines as well as restarting when the buffer of previous lines emptied. 
+* At the moment the pipeline will likely fail as soon as more (spurious) lines are on the same lane, as e.g. in the first challenge video. 
+* This could be solved by building separate lane line detectors for yellow and white together with additional logic which line to choose.
