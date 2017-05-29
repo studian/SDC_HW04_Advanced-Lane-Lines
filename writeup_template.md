@@ -66,7 +66,30 @@ The goals / steps of this project are the following:
 * See the following image: 
 ![alt text][image3]
 
+* Additionally, I included a region of interest that acts on the warped image to reduce artefacts at the bottom of the image.
+* This region is defined through the function `region_of_interest()` and was tested using the wrappers `warp_pipeline(img)` and `warp_binarize_pipeline(img)`.
+* An examples are shown below: 
+![alt text][image4]
+![alt text][image5]
 
+* The function `find_peaks(img,thresh)` takes the bottom half of a binarized and warped lane image to compute a histogram of detected pixel values. 
+* The result is smoothened using a gaussia filter and peaks are subsequently detected using. 
+* The function returns the x values of the peaks larger than `thresh` as well as the smoothened curve.
+* Then I wrote a function `get_next_window(img,center_point,width)` which takes an binary (3 channel) image `img` and computes the average x value `center` of all detected pixels in a window centered at `center_point` of width `width`. 
+* It returns a masked copy of img a well as `center`.
+* The function `lane_from_window(binary,center_point,width)` slices a binary image horizontally in 6 zones and applies `get_next_window` to each of the zones. 
+* The `center_point` of each zone is chosen to be the center value of the previous zone. 
+* Thereby sub-sequent windows follow the lane line pixels if the road bends. 
+* The function returns a masked image of a single lane line seeded at `center_point`. 
+* Given a binary image `left_binary` of a lane line candidate all properties of the line are determined within an instance of a `Line` class.
+
+* The `Line.update(img)` method takes a binary input image `img` of a lane line candidate, fits a second order polynomial to the provided data and computes other metrics. 
+* Sanity checks are performed and successful detections are pushed into a FIFO que of max length `n`. 
+* Each time a new line is detected all metrics are updated. 
+* If no line is detected the oldest result is dropped until the queue is empty and peaks need to be searched for from scratch.
+* A fit to the current lane candidate is saved in the `Line.current_fit_xvals` attribute, together with the corresponding coefficients. * The result of a fit for two lines is shown below:
+![alt text][image6]
+![alt text][image7]
 
 ### 1. Provide an example of a distortion-corrected image.
 
