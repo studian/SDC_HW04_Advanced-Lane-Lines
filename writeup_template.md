@@ -23,6 +23,16 @@ The goals / steps of this project are the following:
 [image6]: ./output_images/step5.JPG "left and right lanes"
 [image7]: ./output_images/step6.JPG "detect lane "
 
+[image8]: ./output_images/test_results/detected_lane_straight_lines1.jpg "result1"
+[image9]: ./output_images/test_results/detected_lane_straight_lines2.jpg "result2"
+[image10]: ./output_images/test_results/detected_lane_test1.jpg "result3"
+[image11]: ./output_images/test_results/detected_lane_test2.jpg "result4"
+[image12]: ./output_images/test_results/detected_lane_test3.jpg "result5"
+[image13]: ./output_images/test_results/detected_lane_test4.jpg "result6"
+[image14]: ./output_images/test_results/detected_lane_test5.jpg "result7"
+[image15]: ./output_images/test_results/detected_lane_test6.jpg "result8"
+
+
 [image10]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
@@ -90,6 +100,21 @@ The goals / steps of this project are the following:
 * A fit to the current lane candidate is saved in the `Line.current_fit_xvals` attribute, together with the corresponding coefficients. * The result of a fit for two lines is shown below:
 ![alt text][image6]
 ![alt text][image7]
+
+* The radius of curvature is computed upon calling the `Line.update()` method of a line. 
+* The method that does the computation is called `Line.get_radius_of_curvature()`.
+* For a second order polynomial f(y)=A y^2 +B y + C the radius of curvature is given by R = [(1+(2 Ay +B)^2 )^3/2]/|2A|.
+* The distance from the center of the lane is computed in the `Line.set_line_base_pos()` method, which essentially measures the distance to each lane and computes the position assuming the lane has a given fixed width of 3.7m.
+* This last function `process_image(img)` handles all lost lane logic. 
+* Here is an example of the result on a test image:
+![alt text][image8]
+![alt text][image9]
+![alt text][image10]
+![alt text][image11]
+![alt text][image12]
+![alt text][image13]
+![alt text][image14]
+![alt text][image15]
 
 ### 1. Provide an example of a distortion-corrected image.
 
