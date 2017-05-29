@@ -38,7 +38,10 @@ The goals / steps of this project are the following:
 * `objpoints` and `imgpoints` are then used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. 
 * I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
+Original Image
 ![alt text][image1]
+
+Undistorted Image
 ![alt text][image2]
 
 ### Pipeline (single images)
