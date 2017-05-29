@@ -41,6 +41,7 @@ The goals / steps of this project are the following:
 * Advanced_Lane_Finding.html
 * [link to my pipeline IPYNB file](./Advanced Lane Finding.ipynb)
 * [link to my pipeline HTML file](./Advanced Lane Finding.html)
+Check out the [my pipline](./Advanced Lane Finding.html)(./Advanced Lane Finding.ipynb).
 ---
 
 ## Camera Calibration
