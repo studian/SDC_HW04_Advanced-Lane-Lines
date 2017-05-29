@@ -22,7 +22,9 @@ The goals / steps of this project are the following:
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
-### My whole implemented algorigm pipline is decribed in "Advanced Lane Finding.ipynb" and "Advanced_Lane_Finding.html".
+### My whole implemented algorigm pipline is decribed in:
+* Advanced Lane Finding.ipynb
+* Advanced_Lane_Finding.html
 
 ## Camera Calibration
 
