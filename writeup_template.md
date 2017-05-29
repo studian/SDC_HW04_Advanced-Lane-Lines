@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/tesp0.JPG "Undistorted"
+[image1]: ./output_images/step0.JPG "Undistorted"
 [image2]: ./output_images/camera_calib/undistortion1.jpg "Undistorted"
 
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
