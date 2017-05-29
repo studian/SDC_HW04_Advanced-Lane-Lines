@@ -15,12 +15,15 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./output_images/step0.JPG "Undistorted"
-[image2]: ./output_images/camera_calib/undistortion1.jpg "Undistorted"
 
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
+[image2]: ./output_images/step1.JPG "Threshold"
+[image3]: ./output_images/step2.JPG "Image ROI"
+[image4]: ./output_images/step3.JPG "Unwraped ROI lane1"
+[image5]: ./output_images/step4.JPG "Unwraped ROI lane2"
+[image6]: ./output_images/step5.JPG "left and right lanes"
+[image7]: ./output_images/step6.JPG "detect lane "
+
+[image10]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
 ### My whole implemented algorigm pipline is decribed in:
@@ -40,9 +43,31 @@ The goals / steps of this project are the following:
 
 ![alt text][image1]
 
-### Pipeline (single images)
+## Pipeline (single images)
 
-#### 1. Provide an example of a distortion-corrected image.
+* For color thresholding I worked in HLS space. 
+* Only the L and S channel were used. I used the s channel for a gradient filter along x and saturation threshold, as well as the l channel for a luminosity threshold filter. 
+* A combination of these filters is used in the function `binarize` 
+
+![alt text][image2]
+
+* A perspective transform to and from "bird's eye" perspective is done in a function `called warp()`. 
+* The `warp()` function takes as input an color image (img), as well as the tobird boolean paramter. 
+* This resulted in the following source and destination points:
+| Source        | Destination   | 
+|:-------------:|:-------------:| 
+| 190, 720      | 340, 720      | 
+| 589, 457      | 340, 0        |
+| 698, 457      | 995, 0        |
+| 1145, 720     | 995, 720      |
+
+* I verified that my perspective transform was working as expected by drawing the src and dst points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image. 
+* See the following image: 
+![alt text][image3]
+
+
+
+### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 ![alt text][image2]
